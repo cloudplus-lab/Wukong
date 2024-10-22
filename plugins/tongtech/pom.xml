@@ -2,80 +2,36 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
-	<groupId>com.github.dos-lab</groupId>
-	<artifactId>wukong-http</artifactId>
+	<groupId>io.github.dos-lab</groupId>
+	<artifactId>wukong-tongtech</artifactId>
 	<version>2.2.0</version>
 	<packaging>jar</packaging>
-
-	<name>wukong</name>
+	<name>wukong-tongtech</name>
 	<url>http://maven.apache.org</url>
-
 	<properties>
-		<kubernetes-httpfrk-core.version>2.2.8</kubernetes-httpfrk-core.version>
-		<httpclient.version>5.3.1</httpclient.version>
-		<wukong-core-version>2.2.0</wukong-core-version>
-		<java.version>1.8</java.version>
+		<jackson.version>2.17.0</jackson.version>
 	</properties>
-
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents.client5/httpclient5 -->
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
 		<dependency>
-			<groupId>org.apache.httpcomponents.client5</groupId>
-			<artifactId>httpclient5</artifactId>
-			<version>${httpclient.version}</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>io.github.dos-lab</groupId>
-			<artifactId>wukong-core</artifactId>
-			<version>${wukong-core-version}</version>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
 		<dependency>
-			<groupId>io.github.kubesys</groupId>
-			<artifactId>httpfrk-springboot</artifactId>
-			<version>${kubernetes-httpfrk-core.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>logback-classic</artifactId>
-					<groupId>ch.qos.logback</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>logback-core</artifactId>
-					<groupId>ch.qos.logback</groupId>
-				</exclusion>
-			</exclusions>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
 	</dependencies>
-
-	<distributionManagement>
-		<repository>
-			<!--必须与 settings.xml 的 id 一致-->
-			<id>g-ubjg5602-iscas-system-maven</id>
-			<name>maven</name>
-			<url>https://g-ubjg5602-maven.pkg.coding.net/repository/iscas-system/jars/</url>
-		</repository>
-	</distributionManagement>
-
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<mainClass>com.github.kubesys.ApplicationServer</mainClass>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -110,9 +66,6 @@
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
 					<archive>
-						<manifest>
-							<mainClass>com.github.webfrk.ApplicationServer</mainClass>
-						</manifest>
 						<manifestEntries>
 							<Class-Path>.</Class-Path>
 						</manifestEntries>
@@ -156,7 +109,35 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!--source -->
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!--javadoc -->
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.4</version>
+				<configuration>
+					<charset>UTF-8</charset>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>

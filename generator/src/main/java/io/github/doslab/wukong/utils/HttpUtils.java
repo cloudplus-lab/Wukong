@@ -4,17 +4,15 @@
 package io.github.doslab.wukong.utils;
 
 import java.net.URI;
-import java.util.concurrent.TimeUnit;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.client.config.RequestConfig;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.config.SocketConfig;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.DefaultClientConnectionReuseStrategy;
-import org.apache.http.impl.client.DefaultConnectionKeepAliveStrategy;
-import org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy;
-import org.apache.http.impl.client.HttpClients;
+import org.apache.hc.client5.http.classic.methods.HttpGet;
+import org.apache.hc.client5.http.config.RequestConfig;
+import org.apache.hc.client5.http.impl.DefaultClientConnectionReuseStrategy;
+import org.apache.hc.client5.http.impl.DefaultConnectionKeepAliveStrategy;
+import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
+import org.apache.hc.client5.http.impl.classic.HttpClients;
+import org.apache.hc.core5.http.HttpEntity;
+import org.apache.hc.core5.util.Timeout;
 
 /**
  * 
@@ -27,17 +25,15 @@ public class HttpUtils {
 
 	public static CloseableHttpClient createDefaultHttpClient() {
 
-		SocketConfig socketConfig = SocketConfig.custom().setSoKeepAlive(true).setSoTimeout(0).setSoReuseAddress(true)
-				.build();
+		RequestConfig requestConfig = RequestConfig.custom()
+							.setConnectTimeout(Timeout.ZERO_MILLISECONDS)
+							.build();
 
-		RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(0).setConnectionRequestTimeout(0)
-				.setSocketTimeout(0).build();
-
-		return HttpClients.custom().setConnectionTimeToLive(0, TimeUnit.SECONDS)
-				.setDefaultSocketConfig(socketConfig).setDefaultRequestConfig(requestConfig)
+		return HttpClients.custom()
+				.setDefaultRequestConfig(requestConfig)
 				.setKeepAliveStrategy(new DefaultConnectionKeepAliveStrategy())
 				.setConnectionReuseStrategy(new DefaultClientConnectionReuseStrategy())
-				.setServiceUnavailableRetryStrategy(new DefaultServiceUnavailableRetryStrategy()).build();
+				.build();
 	}
 	
 	

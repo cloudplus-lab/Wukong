@@ -1,0 +1,5960 @@
+{
+	"RBAC_ListAdminClusterSummary": {
+		"url": "/apis/kpanda.io/v1alpha1/admincluster",
+		"type": "get",
+		"params": [{
+			"name": "user",
+			"type": "string"
+		}, {
+			"name": "userGroup",
+			"type": "array"
+		}]
+	},
+	"RBAC_ListClusterRoleBindings": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/clusterrolebindings",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "array"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "roleRef",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Batch_ListAllCronJobs": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/cronjobs",
+		"type": "get",
+		"params": [{
+			"name": "clusters",
+			"type": "array"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}, {
+			"name": "showVirtualCluster",
+			"type": "boolean"
+		}]
+	},
+	"Apps_ListAllDaemonSets": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/daemonsets",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "array"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}, {
+			"name": "showVirtualCluster",
+			"type": "boolean"
+		}]
+	},
+	"Apps_ListAllDeployments": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/deployments",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "array"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}, {
+			"name": "showVirtualCluster",
+			"type": "boolean"
+		}]
+	},
+	"RBAC_ListGroups": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/groups",
+		"type": "get",
+		"params": [{
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Batch_ListAllJobs": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/jobs",
+		"type": "get",
+		"params": [{
+			"name": "clusters",
+			"type": "array"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}, {
+			"name": "showVirtualCluster",
+			"type": "boolean"
+		}]
+	},
+	"Core_ListNamespaces": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/namespaces",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "array"
+		}, {
+			"name": "workspaceId",
+			"type": "integer"
+		}, {
+			"name": "workspaceAlias",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}, {
+			"name": "onlyUnassign",
+			"type": "boolean"
+		}, {
+			"name": "excludeSystem",
+			"type": "boolean"
+		}, {
+			"name": "showVirtualCluster",
+			"type": "boolean"
+		}]
+	},
+	"Core_ListAllPods": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/pods",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "array"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"RBAC_ListRoleBindings": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/rolebindings",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "array"
+		}, {
+			"name": "namespace",
+			"type": "array"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "roleRef",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Apps_ListAllStatefulSets": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/statefulsets",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "array"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}, {
+			"name": "showVirtualCluster",
+			"type": "boolean"
+		}]
+	},
+	"RBAC_ListUsers": {
+		"url": "/apis/kpanda.io/v1alpha1/asl/users",
+		"type": "get",
+		"params": [{
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"CloudShell_CreateCloudShell": {
+		"url": "/apis/kpanda.io/v1alpha1/cloudshells",
+		"type": "post",
+		"params": [{
+			"name": "body",
+			"type": ""
+		}]
+	},
+	"CloudShell_GetCloudShell": {
+		"url": "/apis/kpanda.io/v1alpha1/cloudshells/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"CloudShell_DeleteCloudShell": {
+		"url": "/apis/kpanda.io/v1alpha1/cloudshells/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Clusterlcm_CreateCluster": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm",
+		"type": "post",
+		"params": [{
+			"name": "body",
+			"type": ""
+		}]
+	},
+	"Clusterlcm_ListKubeVersions": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{cluster}/available-kube-versions",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}]
+	},
+	"Clusterlcm_ListRuntimeVersions": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{cluster}/available-runtime-versions",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "kubeVersion",
+			"type": "string"
+		}]
+	},
+	"Clusterlcm_BatchAddNode": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{cluster}/nodes",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Clusterlcm_RemoveNode": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{cluster}/nodes/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Clusterlcm_ListClusterlcmOps": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{cluster}/ops",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "targetCluster",
+			"type": "string"
+		}, {
+			"name": "action",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Clusterlcm_GetClusterlcmOps": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{cluster}/ops/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Clusterlcm_DeleteClusterlcmOps": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{cluster}/ops/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Clusterlcm_GetClusterlcmOpsJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{cluster}/ops/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Clusterlcm_GetClusterlcmSettings": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{cluster}/settings",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}]
+	},
+	"Clusterlcm_GetPreCheckClusterInfo": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{name}/precheck-infos",
+		"type": "post",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Clusterlcm_CheckCluster": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{name}:check",
+		"type": "post",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Clusterlcm_PreCheckCluster": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{name}:precheck",
+		"type": "post",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Clusterlcm_ResetCluster": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{name}:reset",
+		"type": "post",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Clusterlcm_UpgradeCluster": {
+		"url": "/apis/kpanda.io/v1alpha1/cluster-lcm/{name}:upgrade",
+		"type": "post",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Cluster_ListClusters": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters",
+		"type": "post",
+		"params": [{
+			"name": "body",
+			"type": ""
+		}]
+	},
+	"Cluster_CreateCluster": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters",
+		"type": "post",
+		"params": [{
+			"name": "body",
+			"type": ""
+		}]
+	},
+	"Cluster_ValidateKubeConfig": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/validate",
+		"type": "post",
+		"params": [{
+			"name": "body",
+			"type": ""
+		}]
+	},
+	"Storage_ListAccessibleStorageClasses": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/accessiblestorageclasses",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "provisioner",
+			"type": "string"
+		}, {
+			"name": "reclaimPolicy",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"ClusterSetting_GetAvailableGPU": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/available/gpu",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "type",
+			"type": "string"
+		}]
+	},
+	"Cluster_CreateOpenAPIClusterCert": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clustercert",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_CreateClusterResourceOverride": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterresourceoverride",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_UpdateClusterResourceOverride": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterresourceoverride",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_GetClusterResourceOverride": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterresourceoverride/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Autoscaling_DeleteClusterResourceOverride": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterresourceoverride/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"RBAC_CreateClusterRoleBinding": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterrolebindings",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"RBAC_DeleteClusterRoleBinding": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterrolebindings/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"RBAC_ListClusterRoles": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterroles",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"RBAC_GetClusterRole": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterroles/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"RBAC_DeleteClusterRole": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterroles/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"RBAC_CreateClusterRole": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterroles/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"RBAC_UpdateClusterRole": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/clusterroles/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListClusterConfigMaps": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/configmaps",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "onlyMetadata",
+			"type": "boolean"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Apiextensions_ListCustomResourceDefinitionGroups": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/crd-groups",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}]
+	},
+	"Batch_ListCronJobs": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/cronjobs",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Autoscaling_ListCustomMetricSummary": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/custommetricsummary",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}]
+	},
+	"Apiextensions_ListCustomResourceDefinitions": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/customresourcedefinitions",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_CreateCustomResourceDefinition": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/customresourcedefinitions",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_GetCustomResourceDefinition": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/customresourcedefinitions/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_DeleteCustomResourceDefinition": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/customresourcedefinitions/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_UpdateCustomResourceDefinition": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/customresourcedefinitions/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_GetCustomResourceDefinitionJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/customresourcedefinitions/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apps_ListClusterDaemonSets": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/daemonsets",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Apps_ListClusterDeployments": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/deployments",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"EtcdBackupRestore_VerifyEtcdConnection": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/etcd:verify",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"EtcdBackupRestore_VerifySnapStoreConfig": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/snapstores:verify",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"EtcdBackupRestore_CreateEtcdBackupStrategy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/strategies",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"EtcdBackupRestore_GetEtcdBackupStrategy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/strategies/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"EtcdBackupRestore_DeleteEtcdBackupStrategy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/strategies/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"EtcdBackupRestore_UpdateEtcdBackupStrategy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/strategies/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"EtcdBackupRestore_GetEtcdBackupStrategyJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/strategies/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"EtcdBackupRestore_ExecuteEtcdBackupStrategy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/strategies/{name}:execute",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"EtcdBackupRestore_PauseEtcdBackupStrategy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/strategies/{name}:pause",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"EtcdBackupRestore_ResumeEtcdBackupStrategy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/strategies/{name}:resume",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"EtcdBackupRestore_ListEtcdSnapshots": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/strategies/{strategy}/snapshots",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "strategy",
+			"type": "string"
+		}]
+	},
+	"EtcdBackupRestore_DeleteEtcdSnapshot": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/etcdbackuprestore/strategies/{strategy}/snapshots/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "strategy",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_ListClusterEvents": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/events",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "type",
+			"type": "array"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_ListClusterEventKinds": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/events/kinds",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}]
+	},
+	"Core_ListClusterGPUSummary": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gpusummary",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}]
+	},
+	"Apiextensions_ListCustomResources": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/namespaces/{namespace}/{resource}",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_CreateCustomResource": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/namespaces/{namespace}/{resource}",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_GetCustomResource": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/namespaces/{namespace}/{resource}/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_DeleteCustomResource": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/namespaces/{namespace}/{resource}/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_UpdateCustomResource": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/namespaces/{namespace}/{resource}/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_PatchCustomResource": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/namespaces/{namespace}/{resource}/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_GetCustomResourceJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/namespaces/{namespace}/{resource}/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apiextensions_UpdateCustomResourceStatus": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/namespaces/{namespace}/{resource}/{name}/status",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_ListClusterCustomResources": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/{resource}",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_CreateClusterCustomResource": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/{resource}",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_GetClusterCustomResource": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/{resource}/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_DeleteClusterCustomResource": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/{resource}/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_UpdateClusterCustomResource": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/{resource}/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apiextensions_GetClusterCustomResourceJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/{resource}/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apiextensions_UpdateClusterCustomResourceStatus": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/gvr/{group}/{version}/{resource}/{name}/status",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_ListHelmCharts": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmcharts",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "category",
+			"type": "string"
+		}, {
+			"name": "repo",
+			"type": "array"
+		}, {
+			"name": "required",
+			"type": "boolean"
+		}]
+	},
+	"Addon_ListClusterInstalledHelmChart": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmcharts/installed",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "repoName",
+			"type": "array"
+		}]
+	},
+	"Addon_ListClusterHelmOperations": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmoperations",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "releaseName",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Addon_ListClusterHelmReleases": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmreleases",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "helmChartName",
+			"type": "string"
+		}, {
+			"name": "helmChartRepo",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Addon_ListHelmRepos": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_CreateHelmRepo": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_GetHelmRepo": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_DeleteHelmRepo": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_UpdateHelmRepo": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_GetHelmRepoJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Addon_ValidateHelmRepo": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos/{name}/validate",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_RefreshHelmRepo": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos/{name}:refresh",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Addon_GetHelmChart": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos/{repo}/helmcharts/{name}",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "repo",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}]
+	},
+	"Addon_GetHelmChartDisplay": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos/{repo}/helmcharts/{name}/display",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "repo",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}]
+	},
+	"Addon_GetHelmInstallConfig": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/helmrepos/{repo}/helmcharts/{name}:config",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "repo",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_ListIngressClassSummary": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/ingressclasssummary",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}]
+	},
+	"Networking_ListClusterIngresses": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/ingresses",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Batch_ListJobs": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/jobs",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Cluster_GetClusterKubeConfig": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/kubeconfig",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}]
+	},
+	"Core_ListClusterLimitRanges": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/limitranges",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Networking_ListMetallbIPAddressPools": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/metallb/ippools",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}]
+	},
+	"insight_QueryClusterMetrics": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/metric",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"insight_QueryClusterMetricsRange": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/metricrange",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListClusterNamespaces": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_CreateNamespace": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListConfigMaps": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/configmaps",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_CreateConfigMap": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/configmaps",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_ListConfigMapsRelatedWorkloads": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/configmaps/{configmap}/related",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "configmap",
+			"type": "string"
+		}]
+	},
+	"Core_GetConfigMap": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/configmaps/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_DeleteConfigMap": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/configmaps/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdateConfigMap": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/configmaps/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetConfigMapJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/configmaps/{name}/json",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_PatchConfigMap": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/configmaps/{name}/json",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_ListControllerRevisions": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/controllerrevisions",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}, {
+			"name": "kindName",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}]
+	},
+	"Autoscaling_ListCronHorizontalPodAutoscalers": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronhorizontalpodautoscalers",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_CreateCronHorizontalPodAutoscaler": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronhorizontalpodautoscalers",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_DeleteCronHorizontalPodAutoscaler": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronhorizontalpodautoscalers/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_UpdateCronHorizontalPodAutoscaler": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronhorizontalpodautoscalers/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_GetCronHorizontalPodAutoscalerJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronhorizontalpodautoscalers/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "stable",
+			"type": "boolean"
+		}]
+	},
+	"Batch_ListClusterCronJobs": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronjobs",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Batch_ListJobsByCronJobsName": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronjobs/{cronjob}/jobs",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "cronjob",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Batch_GetCronJob": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronjobs/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Batch_DeleteCronJob": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronjobs/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Batch_PauseCronJob": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronjobs/{name}:pause",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Batch_ResumeCronJob": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/cronjobs/{name}:resume",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_ListDaemonSets": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/daemonsets",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Apps_GetDaemonSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/daemonsets/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_DeleteDaemonSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/daemonsets/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_PatchDaemonSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/daemonsets/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_RestartDaemonSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/daemonsets/{name}:restart",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apps_RollbackDaemonSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/daemonsets/{name}:rollback",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_ListDeployments": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/deployments",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Apps_GetDeployment": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/deployments/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_DeleteDeployment": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/deployments/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_PatchDeployment": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/deployments/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_PauseDeployment": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/deployments/{name}:pause",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apps_RestartDeployment": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/deployments/{name}:restart",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apps_ResumeDeployment": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/deployments/{name}:resume",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apps_RollbackDeployment": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/deployments/{name}:rollback",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_StartDeployment": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/deployments/{name}:start",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apps_StopDeployment": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/deployments/{name}:stop",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_ListEvents": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/events",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}, {
+			"name": "kindName",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "type",
+			"type": "array"
+		}, {
+			"name": "group",
+			"type": "string"
+		}, {
+			"name": "version",
+			"type": "string"
+		}, {
+			"name": "resource",
+			"type": "string"
+		}]
+	},
+	"Addon_ListHelmOperations": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmoperations",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "releaseName",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Addon_GetHelmOperation": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmoperations/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Addon_DeleteHelmOperation": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmoperations/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Addon_GetHelmOperationJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmoperations/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Addon_ListHelmReleases": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmreleases",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_CreateHelmRelease": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmreleases",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_ListHelmReleaseResources": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmreleases/{helmrelease}/resources",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "helmrelease",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Addon_ListHelmReleaseRevisions": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmreleases/{helmrelease}/revisions",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "helmrelease",
+			"type": "string"
+		}]
+	},
+	"Addon_GetHelmRelease": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmreleases/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_DeleteHelmRelease": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmreleases/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_UpdateHelmRelease": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmreleases/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Addon_GetHelmReleaseJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmreleases/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Addon_RollbackHelmRelease": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/helmreleases/{name}:rollback",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_ListHorizontalPodAutoscalers": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/horizontalpodautoscalers",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_CreateHorizontalPodAutoscaler": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/horizontalpodautoscalers",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_DeleteHorizontalPodAutoscaler": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/horizontalpodautoscalers/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_UpdateHorizontalPodAutoscaler": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/horizontalpodautoscalers/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_GetHorizontalPodAutoscalerJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/horizontalpodautoscalers/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "stable",
+			"type": "boolean"
+		}]
+	},
+	"Networking_ListIngresses": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/ingresses",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_CreateIngress": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/ingresses",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_GetIngress": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/ingresses/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_DeleteIngress": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/ingresses/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_UpdateIngress": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/ingresses/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_PatchIngress": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/ingresses/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_GetIngressJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/ingresses/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "stable",
+			"type": "boolean"
+		}]
+	},
+	"Batch_ListClusterJobs": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/jobs",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Batch_GetJob": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/jobs/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Batch_DeleteJob": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/jobs/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Batch_RestartJob": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/jobs/{name}:restart",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListLimitRanges": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/limitranges",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_CreateLimitRange": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/limitranges",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetLimitRange": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/limitranges/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_DeleteLimitRange": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/limitranges/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdateLimitRange": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/limitranges/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetLimitRangeJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/limitranges/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Autoscaling_ListMetricValues": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/metricvalues",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}, {
+			"name": "kindName",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Networking_ListNetworkPolicies": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/networkpolicies",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_CreateNetworkPolicy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/networkpolicies",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_GetNetworkPolicy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/networkpolicies/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_DeleteNetworkPolicy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/networkpolicies/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_UpdateNetworkPolicy": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/networkpolicies/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Networking_GetNetworkPolicyJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/networkpolicies/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "stable",
+			"type": "boolean"
+		}]
+	},
+	"Core_ListPersistentVolumeClaims": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/persistentvolumeclaims",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_CreatePersistentVolumeClaim": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/persistentvolumeclaims",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetPersistentVolumeClaim": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/persistentvolumeclaims/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_DeletePersistentVolumeClaim": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/persistentvolumeclaims/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdatePersistentVolumeClaim": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/persistentvolumeclaims/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdatePersistentVolumeClaimAnnotations": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/persistentvolumeclaims/{name}/annotations",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetPersistentVolumeClaimJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/persistentvolumeclaims/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_UpdatePersistentVolumeClaimLabels": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/persistentvolumeclaims/{name}/labels",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ScalePersistentVolumeClaim": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/persistentvolumeclaims/{name}:scale",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListPods": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/pods",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}, {
+			"name": "kindName",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}, {
+			"name": "status",
+			"type": "string"
+		}]
+	},
+	"Core_GetPod": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/pods/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_DeletePod": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/pods/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_ListContainersByPod": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/pods/{name}/containers",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}]
+	},
+	"insight_GetPodContainerLog": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/pods/{name}/log",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "workload",
+			"type": "string"
+		}, {
+			"name": "container",
+			"type": "string"
+		}, {
+			"name": "startTime",
+			"type": "string"
+		}, {
+			"name": "endTime",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "logSearch",
+			"type": "string"
+		}]
+	},
+	"Apps_ListReplicaSets": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/replicasets",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}, {
+			"name": "kindName",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Apps_GetReplicaSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/replicasets/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_DeleteReplicaSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/replicasets/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_UpdateReplicaSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/replicasets/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_GetReplicaSetJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/replicasets/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_ListResourceQuotas": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/resourcequotas",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_CreateResourceQuota": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/resourcequotas",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetResourceQuota": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/resourcequotas/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdateResourceQuota": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/resourcequotas/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetResourceQuotaJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/resourcequotas/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_ComputeResourceQuota": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/resourcequotas:compute",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}]
+	},
+	"Apiextensions_CreateResource": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/resources",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"RBAC_CreateRoleBinding": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/rolebindings",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"RBAC_DeleteRoleBinding": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/rolebindings/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"RBAC_ListRoles": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/roles",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"RBAC_CreateRole": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/roles",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"RBAC_GetRole": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/roles/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"RBAC_DeleteRole": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/roles/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"RBAC_UpdateRole": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/roles/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListSecrets": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/secrets",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_CreateSecret": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/secrets",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetSecret": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/secrets/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_DeleteSecret": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/secrets/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdateSecret": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/secrets/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetSecretJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/secrets/{name}/json",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_PatchSecret": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/secrets/{name}/json",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_ListSecretsRelatedWorkloads": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/secrets/{secret}/related",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "secret",
+			"type": "string"
+		}]
+	},
+	"Core_CreateServiceAccount": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/serviceaccounts",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetServiceAccount": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/serviceaccounts/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_DeleteServiceAccount": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/serviceaccounts/{name}",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_ListServices": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/services",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_CreateService": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/services",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetService": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/services/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_DeleteService": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/services/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdateService": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/services/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_PatchService": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/services/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetServiceJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/services/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apps_ListStatefulSets": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/statefulsets",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Apps_GetStatefulSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/statefulsets/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_DeleteStatefulSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/statefulsets/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_PatchStatefulSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/statefulsets/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_RestartStatefulSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/statefulsets/{name}:restart",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apps_RollbackStatefulSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/statefulsets/{name}:rollback",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_StartStatefulSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/statefulsets/{name}:start",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apps_StopStatefulSet": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/statefulsets/{name}:stop",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Autoscaling_ListVerticalPodAutoscalers": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/verticalpodautoscalers",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_CreateVerticalPodAutoscaler": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/verticalpodautoscalers",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_DeleteVerticalPodAutoscaler": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/verticalpodautoscalers/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_UpdateVerticalPodAutoscaler": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/verticalpodautoscalers/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Autoscaling_GetVerticalPodAutoscalerJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/verticalpodautoscalers/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "stable",
+			"type": "boolean"
+		}]
+	},
+	"Storage_ListVolumeSnapshots": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/volumesnapshots",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Storage_CreateVolumeSnapshot": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/volumesnapshots",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Storage_DeleteVolumeSnapshot": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/volumesnapshots/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Storage_UpdateVolumeSnapshot": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/volumesnapshots/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Storage_GetVolumeSnapshotJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/volumesnapshots/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Apps_CreateWorkloadByJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/{kind}/json",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_GetWorkloadJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/{kind}/{name}/json",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_UpdateWorkloadByJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{namespace}/{kind}/{name}/json",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "kind",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetNamespace": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_DeleteNamespace": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdateNamespace": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_PatchNamespace": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{name}",
+		"type": "patch",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetNamespaceJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_DisableNamespacePodSecurity": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{name}/podsecurity:disable",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_EnableNamespacePodSecurity": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{name}/podsecurity:enable",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Workspace_BindResourceToWorkspace": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{name}:bind",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Workspace_UnbindResourceFromWorkspace": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespaces/{name}:unbind",
+		"type": "delete",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_ListClusterNamespaceSummary": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/namespacesummary",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}]
+	},
+	"Networking_ListClusterNetworkPolicies": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/networkpolicies",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}]
+	},
+	"Core_ListNodes": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "phase",
+			"type": "array"
+		}, {
+			"name": "nodeIp",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "role",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Core_GetNode": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdateNode": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetNodeJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_UnbindNodeToNamespace": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{name}:unbindNamespace",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdateNodeAnnotations": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{node}/annotations",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "node",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_CordonNode": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{node}/cordon",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "node",
+			"type": "string"
+		}]
+	},
+	"Core_UpdateNodeGPUMode": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{node}/gpu-mode",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "node",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListNodeGPU": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{node}/gpus",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "node",
+			"type": "string"
+		}]
+	},
+	"Core_PutNodeLabels": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{node}/labels",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "node",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListPodsByNode": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{node}/pods",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "node",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "status",
+			"type": "string"
+		}]
+	},
+	"Core_PutNodeTaints": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{node}/taints",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "node",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UnCordonNode": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes/{node}/uncordon",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "node",
+			"type": "string"
+		}]
+	},
+	"Core_BatchBindNodeToNamespace": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodes:batchBindNamespace",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListClusterNodeSummary": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/nodesummary",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}]
+	},
+	"Core_ListClusterPersistentVolumeClaims": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/persistentvolumeclaims",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "accessMode",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Core_ListPersistentVolumes": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/persistentvolumes",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_CreatePersistentVolume": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/persistentvolumes",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetPersistentVolume": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/persistentvolumes/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_DeletePersistentVolume": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/persistentvolumes/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_UpdatePersistentVolume": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/persistentvolumes/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_GetPersistentVolumeJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/persistentvolumes/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Core_ListClusterPods": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/pods",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}, {
+			"name": "status",
+			"type": "string"
+		}]
+	},
+	"insight_QueryPublicUsage": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/publicmetric",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"insight_QueryPublicRangeUsage": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/publicmetricrange",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Apps_ListClusterReplicaSets": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/replicasets",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}]
+	},
+	"Core_ListClusterSecrets": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/secrets",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "type",
+			"type": "string"
+		}, {
+			"name": "onlyMetadata",
+			"type": "boolean"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Core_ListServiceAccounts": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/serviceaccounts",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namesapce",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Core_UpdateServiceAccount": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/serviceaccounts/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListClusterServices": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/services",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "type",
+			"type": "array"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"ClusterSetting_GetClusterSetting": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/settings",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"ClusterSetting_UpdateClusterSetting": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/settings",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"ClusterSetting_ListGPUSetting": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/settings/gpu",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}]
+	},
+	"ClusterSetting_ListPlugins": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/settings/plugins",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}]
+	},
+	"ClusterSetting_DisablePlugin": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/settings/plugins/{name}:disable",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"ClusterSetting_EnablePlugin": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/settings/plugins/{name}:enable",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Core_ListClusterSriovAllocatedResources": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/sriovnodesresources",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}]
+	},
+	"Apps_ListClusterStatefulSets": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/statefulsets",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "phase",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}]
+	},
+	"Storage_ListStorageClasses": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/storageclasses",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Storage_CreateStorageClass": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/storageclasses",
+		"type": "post",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Storage_GetStorageClass": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/storageclasses/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Storage_DeleteStorageClass": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/storageclasses/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Storage_UpdateStorageClass": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/storageclasses/{name}",
+		"type": "put",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Storage_GetStorageClassJSON": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/storageclasses/{name}/json",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}]
+	},
+	"Storage_ListClusterVolumeSnapshots": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{cluster}/volumesnapshots",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}, {
+			"name": "labelSelector",
+			"type": "string"
+		}, {
+			"name": "fieldSelector",
+			"type": "string"
+		}]
+	},
+	"Cluster_GetCluster": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{name}",
+		"type": "get",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Cluster_DeleteCluster": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{name}",
+		"type": "put",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Cluster_UpdateClusters": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{name}",
+		"type": "put",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Cluster_EditClusterLabels": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{name}/labels",
+		"type": "put",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Cluster_ValidateCluster": {
+		"url": "/apis/kpanda.io/v1alpha1/clusters/{name}/validate",
+		"type": "post",
+		"params": [{
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Cluster_ListClusterSummary": {
+		"url": "/apis/kpanda.io/v1alpha1/clustersummary",
+		"type": "get",
+		"params": [{
+			"name": "showVirtualCluster",
+			"type": "boolean"
+		}, {
+			"name": "filterByStrategy",
+			"type": "boolean"
+		}, {
+			"name": "filterBySnapshot",
+			"type": "boolean"
+		}]
+	},
+	"EtcdBackupRestore_ListEtcdBackupStrategies": {
+		"url": "/apis/kpanda.io/v1alpha1/etcdbackuprestore/strategies",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "name",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "sortBy",
+			"type": "string"
+		}, {
+			"name": "sortDir",
+			"type": "string"
+		}]
+	},
+	"Workspace_ListGlobalRolesForCurrentUser": {
+		"url": "/apis/kpanda.io/v1alpha1/globalroles",
+		"type": "get",
+		"params": []
+	},
+	"Cluster_ListAllClusterGPU": {
+		"url": "/apis/kpanda.io/v1alpha1/gpus",
+		"type": "get",
+		"params": []
+	},
+	"Cluster_CreateOpenAPIClusterCertByKubeSystemID": {
+		"url": "/apis/kpanda.io/v1alpha1/kubesystemid/{kubeSystemID}/clustercert",
+		"type": "post",
+		"params": [{
+			"name": "kubeSystemID",
+			"type": "string"
+		}, {
+			"name": "body",
+			"type": "object"
+		}]
+	},
+	"Image_ListRegistries": {
+		"url": "/apis/kpanda.io/v1alpha1/registries",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "global",
+			"type": "boolean"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "public",
+			"type": "boolean"
+		}]
+	},
+	"Image_DetectKangaroo": {
+		"url": "/apis/kpanda.io/v1alpha1/registries/kangaroo",
+		"type": "get",
+		"params": []
+	},
+	"Image_ListProjects": {
+		"url": "/apis/kpanda.io/v1alpha1/registries/{registry}/projects",
+		"type": "get",
+		"params": [{
+			"name": "registry",
+			"type": "string"
+		}, {
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "public",
+			"type": "boolean"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}]
+	},
+	"Image_ListRepositories": {
+		"url": "/apis/kpanda.io/v1alpha1/registries/{registry}/repositories",
+		"type": "get",
+		"params": [{
+			"name": "registry",
+			"type": "string"
+		}, {
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "project",
+			"type": "string"
+		}, {
+			"name": "fuzzyName",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "public",
+			"type": "boolean"
+		}, {
+			"name": "showArtifacts",
+			"type": "boolean"
+		}]
+	},
+	"Image_ListArtifacts": {
+		"url": "/apis/kpanda.io/v1alpha1/registries/{registry}/repositories/{repository}/artifacts",
+		"type": "get",
+		"params": [{
+			"name": "registry",
+			"type": "string"
+		}, {
+			"name": "repository",
+			"type": "string"
+		}, {
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "project",
+			"type": "string"
+		}, {
+			"name": "page",
+			"type": "integer"
+		}, {
+			"name": "pageSize",
+			"type": "integer"
+		}, {
+			"name": "public",
+			"type": "boolean"
+		}]
+	},
+	"Registry_ListImageTags": {
+		"url": "/apis/kpanda.io/v1alpha1/registry/tags",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "secret",
+			"type": "string"
+		}, {
+			"name": "image",
+			"type": "string"
+		}, {
+			"name": "registryHost",
+			"type": "string"
+		}]
+	},
+	"Registry_VerifyRegistry": {
+		"url": "/apis/kpanda.io/v1alpha1/registry/verify",
+		"type": "post",
+		"params": [{
+			"name": "body",
+			"type": ""
+		}]
+	},
+	"Registry_VerifyImage": {
+		"url": "/apis/kpanda.io/v1alpha1/registry/verifyImage",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}, {
+			"name": "secret",
+			"type": "string"
+		}, {
+			"name": "image",
+			"type": "string"
+		}, {
+			"name": "registryHost",
+			"type": "string"
+		}]
+	},
+	"RBAC_ListAllUserRoleSummary": {
+		"url": "/apis/kpanda.io/v1alpha1/rolesummary",
+		"type": "get",
+		"params": [{
+			"name": "cluster",
+			"type": "string"
+		}, {
+			"name": "namespace",
+			"type": "string"
+		}]
+	},
+	"SettingService_GPUSetting": {
+		"url": "/apis/kpanda.io/v1alpha1/settings/gpu",
+		"type": "get",
+		"params": []
+	},
+	"Workspace_ListWorkspaces": {
+		"url": "/apis/kpanda.io/v1alpha1/workspaces",
+		"type": "get",
+		"params": []
+	}
+}

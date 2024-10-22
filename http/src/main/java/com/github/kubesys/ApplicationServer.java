@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.github.kubesys.httpfrk.HttpServer;
+import io.github.kubesys.devfrk.spring.HttpServer;
 
 
 /**
@@ -25,7 +25,7 @@ import com.github.kubesys.httpfrk.HttpServer;
  */
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "com.github.kubesys.httpfrk", "com.github.doslab.wukong" })
+@ComponentScan(basePackages = {"com.github.doslab.wukong" })
 public class ApplicationServer extends HttpServer  {
 
 	/**
@@ -35,26 +35,6 @@ public class ApplicationServer extends HttpServer  {
 	 */
 	public static void main(String[] args) {
 		SpringApplication.run(ApplicationServer.class, args);
-	}
-
-	@Override
-	public String getTitle() {
-		return "crosscloud";
-	}
-
-	@Override
-	public String getDesc() {
-		return "crosscloud";
-	}
-
-	@Override
-	public String getVersion() {
-		return "2.0.0";
-	}
-
-	@Override
-	public String getPackage() {
-		return "com.github.kubesys";
 	}
 
 }

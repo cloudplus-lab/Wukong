@@ -1,0 +1,15 @@
+{
+	"version": "1.0.0",
+	"kind": "AmazonEKS",
+	"client": "com.amazonaws.services.eks.AmazonEKS",
+	"initClient": "com.amazonaws.services.eks.AmazonEKSClientBuilder.standard().withCredentials(new\r\n      com.amazonaws.auth.AWSStaticCredentialsProvider(new com.amazonaws.auth.BasicAWSCredentials(map.get(\"accessKey\"),\r\n      map.get(\"secretKey\")))).withRegion(map.get(\"zone\")).build();",
+	"dependency": [{
+		"groupId": "com.amazonaws",
+		"artifactId": "aws-java-sdk-eks",
+		"version": "1.11.887"
+	}, {
+		"groupId": "com.fasterxml.jackson.core",
+		"artifactId": "jackson-databind",
+		"version": "2.11.3"
+	}]
+}

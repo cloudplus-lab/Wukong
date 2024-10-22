@@ -1,0 +1,30 @@
+/**
+ * Copyright (2021, ) Institute of Software, Chinese Academy of Sciences
+ */
+package io.github.kubesys.crosscloud;
+
+import java.util.Map;
+
+/**
+ * @author  wuheng@otcaix.iscas.ac.cn
+ * 
+ * @version 2.1.0
+ * @since   2021.10.30
+ * 
+ **/
+public class Client {
+
+	public static Object client;
+	
+	public static Object getClient(Map<String, String> map) {
+		if (client == null) {
+			try {
+				client = VALUE;
+			} catch (Exception ex) {
+				
+			}
+		}
+		return client;
+	}
+}
+

@@ -4,3 +4,11 @@ server:
   servlet:
     context-path: /doslab
     
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .html
+    

@@ -9,7 +9,12 @@ import java.util.Map;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.github.kubesys.KubernetesClient;
+
+import io.github.doslab.wukong.CloudAPIAnalyzer;
+import io.github.doslab.wukong.CloudClassloader;
+import io.github.doslab.wukong.CloudGenerator;
+import io.github.doslab.wukong.CloudMetadata;
+import io.github.kubesys.client.KubernetesClient;
 
 public class Command  {
 

@@ -3,79 +3,24 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.github.dos-lab</groupId>
-	<artifactId>wukong-http</artifactId>
-	<version>2.2.0</version>
+	<groupId>io.github.kubesys.crosscloud</groupId>
+	<artifactId>NAME</artifactId>
+	<version>VERSION</version>
 	<packaging>jar</packaging>
 
 	<name>wukong</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<kubernetes-httpfrk-core.version>2.2.8</kubernetes-httpfrk-core.version>
-		<httpclient.version>5.3.1</httpclient.version>
-		<wukong-core-version>2.2.0</wukong-core-version>
-		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents.client5/httpclient5 -->
-		<dependency>
-			<groupId>org.apache.httpcomponents.client5</groupId>
-			<artifactId>httpclient5</artifactId>
-			<version>${httpclient.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.github.dos-lab</groupId>
-			<artifactId>wukong-core</artifactId>
-			<version>${wukong-core-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.github.kubesys</groupId>
-			<artifactId>httpfrk-springboot</artifactId>
-			<version>${kubernetes-httpfrk-core.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>logback-classic</artifactId>
-					<groupId>ch.qos.logback</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>logback-core</artifactId>
-					<groupId>ch.qos.logback</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+		DEP
 	</dependencies>
-
-	<distributionManagement>
-		<repository>
-			<!--必须与 settings.xml 的 id 一致-->
-			<id>g-ubjg5602-iscas-system-maven</id>
-			<name>maven</name>
-			<url>https://g-ubjg5602-maven.pkg.coding.net/repository/iscas-system/jars/</url>
-		</repository>
-	</distributionManagement>
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<mainClass>com.github.kubesys.ApplicationServer</mainClass>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -110,9 +55,6 @@
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
 					<archive>
-						<manifest>
-							<mainClass>com.github.webfrk.ApplicationServer</mainClass>
-						</manifest>
 						<manifestEntries>
 							<Class-Path>.</Class-Path>
 						</manifestEntries>
@@ -158,5 +100,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
+

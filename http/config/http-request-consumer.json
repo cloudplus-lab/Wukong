@@ -1,0 +1,6 @@
+{
+	"GET": "^/.*/(get|list|query).*",
+	"PUT": "^/.*/(update|modify|replace|change|resize|tune|revert|convert).*",
+	"DELETE": "^/.*/(delete|remove|eject|detach|unplug|unset).*",
+	"POST": "^/.*/(exec|read|update|delete|login|logout|add|create|new|generate|insert|clone|attach|plug|set|bind|solve|get|list|query|describe|retrieve|echo|diff|count).*"
+}
